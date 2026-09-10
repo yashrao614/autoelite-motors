@@ -89,20 +89,22 @@ function ModalContent({ vehicle, onClose }: { vehicle: Vehicle; onClose: () => v
                   className="object-contain p-4"
                 />
               </div>
-              <div className="mt-4 grid grid-cols-4 gap-3">
-                {vehicle.gallery.map((src, i) => (
-                  <button
-                    key={i}
-                    type="button"
-                    onClick={() => setActiveImage(i)}
-                    className={`relative h-16 overflow-hidden rounded-xl border bg-graphite-3 transition-colors duration-200 sm:h-20 ${
-                      activeImage === i ? "border-teal" : "border-border-hair hover:border-border-strong"
-                    }`}
-                  >
-                    <Image src={src} alt="" fill sizes="120px" className="object-contain p-1.5 opacity-90" />
-                  </button>
-                ))}
-              </div>
+              {vehicle.gallery.length > 1 && (
+                <div className="mt-4 grid grid-cols-4 gap-3">
+                  {vehicle.gallery.map((src, i) => (
+                    <button
+                      key={i}
+                      type="button"
+                      onClick={() => setActiveImage(i)}
+                      className={`relative h-16 overflow-hidden rounded-xl border bg-graphite-3 transition-colors duration-200 sm:h-20 ${
+                        activeImage === i ? "border-teal" : "border-border-hair hover:border-border-strong"
+                      }`}
+                    >
+                      <Image src={src} alt="" fill sizes="120px" className="object-contain p-1.5 opacity-90" />
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
 
             <div className="border-t border-border-hair p-5 sm:p-8 lg:border-l lg:border-t-0">

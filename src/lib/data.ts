@@ -71,12 +71,7 @@ export const vehicles: Vehicle[] = [
       { name: "Guards Red", hex: "#9c2b28" },
     ],
     image: "/cars/porsche-911-carrera-studio.png",
-    gallery: [
-      "/cars/porsche-911-carrera-studio.png",
-      "/cars/porsche-taycan-studio.png",
-      "/cars/porsche-911-carrera-studio.png",
-      "/cars/porsche-911-carrera-studio.png",
-    ],
+    gallery: ["/cars/porsche-911-carrera-studio.png"],
     accent: "#008C91",
   },
   {
@@ -109,12 +104,7 @@ export const vehicles: Vehicle[] = [
       { name: "Sapphire Black", hex: "#181a1e" },
     ],
     image: "/cars/bmw-m4-competition-studio.png",
-    gallery: [
-      "/cars/bmw-m4-competition-studio.png",
-      "/cars/bmw-i7-studio.png",
-      "/cars/bmw-m4-competition-studio.png",
-      "/cars/bmw-m4-competition-studio.png",
-    ],
+    gallery: ["/cars/bmw-m4-competition-studio.png"],
     accent: "#008C91",
   },
   {
@@ -147,12 +137,7 @@ export const vehicles: Vehicle[] = [
       { name: "Designo Diamond White", hex: "#efeee8" },
     ],
     image: "/cars/mercedes-amg-gt-studio.png",
-    gallery: [
-      "/cars/mercedes-amg-gt-studio.png",
-      "/cars/mercedes-s-class-studio.png",
-      "/cars/mercedes-amg-gt-studio.png",
-      "/cars/mercedes-amg-gt-studio.png",
-    ],
+    gallery: ["/cars/mercedes-amg-gt-studio.png"],
     accent: "#008C91",
   },
   {
@@ -185,12 +170,7 @@ export const vehicles: Vehicle[] = [
       { name: "Glacier White", hex: "#eef0ee" },
     ],
     image: "/cars/audi-rs7-sportback-studio.png",
-    gallery: [
-      "/cars/audi-rs7-sportback-studio.png",
-      "/cars/audi-rs7-sportback-studio.png",
-      "/cars/audi-rs7-sportback-studio.png",
-      "/cars/audi-rs7-sportback-studio.png",
-    ],
+    gallery: ["/cars/audi-rs7-sportback-studio.png"],
     accent: "#008C91",
   },
   {
@@ -223,12 +203,7 @@ export const vehicles: Vehicle[] = [
       { name: "Batumi Gold", hex: "#a98a52" },
     ],
     image: "/cars/range-rover-sport-studio.png",
-    gallery: [
-      "/cars/range-rover-sport-studio.png",
-      "/cars/range-rover-sport-studio.png",
-      "/cars/range-rover-sport-studio.png",
-      "/cars/range-rover-sport-studio.png",
-    ],
+    gallery: ["/cars/range-rover-sport-studio.png"],
     accent: "#008C91",
   },
   {
@@ -261,12 +236,7 @@ export const vehicles: Vehicle[] = [
       { name: "Selenite Grey", hex: "#79787c" },
     ],
     image: "/cars/mercedes-s-class-studio.png",
-    gallery: [
-      "/cars/mercedes-s-class-studio.png",
-      "/cars/mercedes-amg-gt-studio.png",
-      "/cars/mercedes-s-class-studio.png",
-      "/cars/mercedes-s-class-studio.png",
-    ],
+    gallery: ["/cars/mercedes-s-class-studio.png"],
     accent: "#008C91",
   },
   {
@@ -299,12 +269,7 @@ export const vehicles: Vehicle[] = [
       { name: "Carbon Black", hex: "#141414" },
     ],
     image: "/cars/bmw-i7-studio.png",
-    gallery: [
-      "/cars/bmw-i7-studio.png",
-      "/cars/bmw-m4-competition-studio.png",
-      "/cars/bmw-i7-studio.png",
-      "/cars/bmw-i7-studio.png",
-    ],
+    gallery: ["/cars/bmw-i7-studio.png"],
     accent: "#008C91",
   },
   {
@@ -337,12 +302,7 @@ export const vehicles: Vehicle[] = [
       { name: "Ice Grey", hex: "#c9cbc6" },
     ],
     image: "/cars/porsche-taycan-studio.png",
-    gallery: [
-      "/cars/porsche-taycan-studio.png",
-      "/cars/porsche-911-carrera-studio.png",
-      "/cars/porsche-taycan-studio.png",
-      "/cars/porsche-taycan-studio.png",
-    ],
+    gallery: ["/cars/porsche-taycan-studio.png"],
     accent: "#008C91",
   },
 ];
