@@ -33,11 +33,7 @@ export function Brands() {
                     : "border-border-hair hover:border-teal/50"
                 }`}
               >
-                <Mark
-                  className={`h-9 w-auto max-w-[70px] transition-colors duration-300 ${
-                    i === 0 ? "text-teal-light" : "text-titanium group-hover:text-teal-light"
-                  }`}
-                />
+                <Mark className="h-9 w-auto max-w-[70px] transition-transform duration-300 group-hover:scale-110" />
                 <span className="text-xs font-medium uppercase tracking-[0.08em] text-off-white/80">
                   {brand}
                 </span>

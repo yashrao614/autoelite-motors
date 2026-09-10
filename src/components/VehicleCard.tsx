@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import { Heart, Gauge, Timer, GasPump } from "@phosphor-icons/react";
 import type { Vehicle } from "@/lib/data";
 import { toggleWishlist, useWishlist } from "@/lib/wishlist";
+import { brandMarks } from "./BrandMarks";
 
 export function VehicleCard({
   vehicle,
@@ -17,6 +18,7 @@ export function VehicleCard({
 }) {
   const wishlist = useWishlist();
   const saved = wishlist.includes(vehicle.id);
+  const Mark = brandMarks[vehicle.brand];
 
   return (
     <motion.div
@@ -60,13 +62,20 @@ export function VehicleCard({
 
       <div className="flex flex-1 flex-col p-5">
         <div className="flex items-start justify-between gap-2">
-          <div>
-            <h3 className="font-display text-lg font-bold text-off-white">
-              {vehicle.brand} {vehicle.model.split(" ")[0]}
-            </h3>
-            <p className="mt-0.5 text-sm text-muted-gray">
-              {vehicle.model.split(" ").slice(1).join(" ") || vehicle.bodyType}
-            </p>
+          <div className="flex items-start gap-2.5">
+            {Mark && (
+              <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-graphite-4/60">
+                <Mark className="h-4 w-auto max-w-[18px]" />
+              </span>
+            )}
+            <div>
+              <h3 className="font-display text-lg font-bold text-off-white">
+                {vehicle.brand} {vehicle.model.split(" ")[0]}
+              </h3>
+              <p className="mt-0.5 text-sm text-muted-gray">
+                {vehicle.model.split(" ").slice(1).join(" ") || vehicle.bodyType}
+              </p>
+            </div>
           </div>
           <span className="whitespace-nowrap font-display text-base font-bold text-off-white">
             {vehicle.price}

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 import { X } from "@phosphor-icons/react";
 import type { Vehicle } from "@/lib/data";
+import { brandMarks } from "./BrandMarks";
 
 type VehicleDetailModalProps = {
   vehicle: Vehicle | null;
@@ -45,6 +46,7 @@ export function VehicleDetailModal({ vehicle, onClose }: VehicleDetailModalProps
 
 function ModalContent({ vehicle, onClose }: { vehicle: Vehicle; onClose: () => void }) {
   const [activeImage, setActiveImage] = useState(0);
+  const Mark = brandMarks[vehicle.brand];
 
   return (
     <motion.div
@@ -104,9 +106,16 @@ function ModalContent({ vehicle, onClose }: { vehicle: Vehicle; onClose: () => v
             </div>
 
             <div className="border-t border-border-hair p-5 sm:p-8 lg:border-l lg:border-t-0">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-teal-light">
-                {vehicle.brand}
-              </p>
+              <div className="flex items-center gap-2">
+                {Mark && (
+                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-graphite-4/60">
+                    <Mark className="h-4 w-auto max-w-[18px]" />
+                  </span>
+                )}
+                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-teal-light">
+                  {vehicle.brand}
+                </p>
+              </div>
               <h3 className="mt-1 font-display text-2xl font-bold text-off-white sm:text-3xl">
                 {vehicle.model}
               </h3>
