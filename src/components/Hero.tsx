@@ -33,7 +33,7 @@ export function Hero() {
         style={{ background: "linear-gradient(180deg, rgba(21,23,25,0.3) 0%, transparent 25%, transparent 75%, rgba(21,23,25,0.55) 100%)" }}
       />
 
-      <div className="relative z-10 -mt-16 w-full pl-6 sm:-mt-20 sm:pl-10 lg:pl-14">
+      <div className="relative z-10 -mt-20 w-full pl-6 sm:-mt-24 sm:pl-10 lg:pl-14">
         <div className="max-w-[220px] sm:max-w-xs lg:max-w-sm">
           <motion.p
             initial={{ opacity: 0, y: 16 }}
