@@ -14,8 +14,8 @@ export function Contact() {
     <section id="contact" className="border-t border-border-hair bg-graphite-2 py-20 sm:py-28">
       <div className="container-page">
         <div className="max-w-xl">
-          <p className="text-[11px] font-medium uppercase tracking-[0.4em] text-teal-light">Visit Us</p>
-          <h2 className="mt-3 font-display text-3xl font-semibold text-off-white sm:text-4xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-teal-light">Visit Us</p>
+          <h2 className="mt-3 font-display text-3xl font-bold text-off-white sm:text-4xl">
             Find a Showroom
           </h2>
         </div>
@@ -29,9 +29,7 @@ export function Contact() {
                   type="button"
                   onClick={() => setActiveCity(i)}
                   className={`rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-wide transition-colors duration-200 ${
-                    activeCity === i
-                      ? "bg-teal/20 text-teal-light"
-                      : "text-titanium/60 hover:text-off-white"
+                    activeCity === i ? "bg-teal/20 text-teal-light" : "text-titanium/60 hover:text-off-white"
                   }`}
                 >
                   {loc.city}
@@ -88,7 +86,7 @@ export function Contact() {
                 </label>
                 <button
                   type="submit"
-                  className="mt-1 w-full rounded-full border border-teal/50 bg-gradient-to-b from-teal-light to-teal py-3.5 text-sm font-semibold text-graphite shadow-[0_8px_24px_-8px_rgba(0,140,145,0.55)] transition-all duration-200 hover:brightness-105 active:scale-[0.98]"
+                  className="mt-1 w-full rounded-full bg-teal py-3.5 text-sm font-semibold text-graphite shadow-[0_8px_24px_-8px_rgba(0,140,145,0.55)] transition-all duration-200 hover:brightness-110 active:scale-[0.98]"
                 >
                   Send Message
                 </button>

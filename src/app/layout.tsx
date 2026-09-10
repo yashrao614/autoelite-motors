@@ -14,9 +14,9 @@ const grotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "AutoElite — The Showroom, Reimagined",
+  title: "AutoElite — Luxury Lives Here",
   description:
-    "Step through the emblem into AutoElite. A graphite-and-titanium automotive gallery presenting the world's most desirable performance and luxury vehicles.",
+    "AutoElite is a premium automotive dealership presenting a curated collection of performance and luxury vehicles.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -12,10 +12,7 @@ export function TestDriveCTA() {
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse 60% 60% at 50% 0%, rgba(0,140,145,0.14) 0%, transparent 60%)",
-        }}
+        style={{ background: "radial-gradient(ellipse 60% 60% at 50% 0%, rgba(0,140,145,0.14) 0%, transparent 60%)" }}
       />
       <div className="container-page relative">
         <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-center">
@@ -25,25 +22,16 @@ export function TestDriveCTA() {
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 0.5 }}
           >
-            <p className="text-[11px] font-medium uppercase tracking-[0.4em] text-teal-light">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-teal-light">
               Get Behind the Wheel
             </p>
-            <h2 className="mt-3 font-display text-3xl font-semibold leading-[1.08] text-off-white sm:text-4xl lg:text-5xl">
-              READY TO EXPERIENCE IT?
+            <h2 className="mt-3 font-display text-3xl font-bold leading-[1.08] text-off-white sm:text-4xl lg:text-5xl">
+              Ready to Experience It?
             </h2>
-            <p className="mt-4 max-w-md text-sm text-titanium/70 sm:text-base">
+            <p className="mt-4 max-w-md text-sm text-titanium/80 sm:text-base">
               The right car isn&rsquo;t just something you own. It&rsquo;s something
-              you experience. Book a private test drive at your nearest
-              showroom.
+              you experience. Book a private test drive at your nearest showroom.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a
-                href="#contact"
-                className="rounded-full border border-border-strong px-6 py-3 text-sm font-semibold text-off-white transition-all duration-200 hover:border-teal/50 hover:text-teal-light"
-              >
-                Contact Us
-              </a>
-            </div>
           </motion.div>
 
           <motion.form
@@ -88,7 +76,7 @@ export function TestDriveCTA() {
                 <div className="sm:col-span-2">
                   <button
                     type="submit"
-                    className="w-full rounded-full border border-teal/50 bg-gradient-to-b from-teal-light to-teal py-3.5 text-sm font-semibold text-graphite shadow-[0_8px_24px_-8px_rgba(0,140,145,0.55)] transition-all duration-200 hover:brightness-105 active:scale-[0.98]"
+                    className="w-full rounded-full bg-teal py-3.5 text-sm font-semibold text-graphite shadow-[0_8px_24px_-8px_rgba(0,140,145,0.55)] transition-all duration-200 hover:brightness-110 active:scale-[0.98]"
                   >
                     Book a Test Drive
                   </button>

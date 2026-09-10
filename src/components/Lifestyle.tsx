@@ -1,83 +1,58 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "motion/react";
 
 export function Lifestyle() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
-  const parallaxY = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["-6%", "6%"]);
 
   return (
-    <section ref={ref} className="relative h-[70vh] overflow-hidden border-t border-border-hair sm:h-[85vh]">
-      <motion.div className="absolute inset-0" style={{ y: parallaxY }}>
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(180deg, #0d0f10 0%, #14171a 38%, #191d20 55%, #0b0c0d 100%)",
-          }}
+    <section id="lifestyle" ref={ref} className="relative h-[70vh] overflow-hidden sm:h-[85vh]">
+      <motion.div style={{ y }} className="absolute inset-0 scale-110">
+        <Image
+          src="/lifestyle-road.png"
+          alt="AutoElite lifestyle — a journey beyond destinations"
+          fill
+          sizes="100vw"
+          className="object-cover"
         />
-        <div
-          className="absolute inset-x-0 bottom-0 h-2/3"
-          style={{
-            background:
-              "linear-gradient(180deg, transparent, rgba(0,140,145,0.06) 40%, rgba(0,0,0,0.6) 100%)",
-          }}
-        />
-        {/* horizon light strip */}
-        <div className="absolute inset-x-0 top-[52%] h-px bg-gradient-to-r from-transparent via-teal-light/50 to-transparent blur-[1px]" />
-        <div className="absolute inset-x-[10%] top-[52%] h-[2px] bg-gradient-to-r from-transparent via-teal/30 to-transparent blur-md" />
-        {/* road streaks */}
-        <div className="absolute inset-x-0 bottom-0 top-[52%] [perspective:600px]">
-          <div
-            className="absolute inset-0 opacity-40"
-            style={{
-              background:
-                "repeating-linear-gradient(90deg, rgba(174,180,184,0.08) 0px, rgba(174,180,184,0.08) 2px, transparent 2px, transparent 90px)",
-              transform: "rotateX(60deg) scale(2)",
-              transformOrigin: "50% 0%",
-            }}
-          />
-        </div>
       </motion.div>
-
       <div
         className="absolute inset-0"
-        style={{ background: "radial-gradient(ellipse 80% 70% at 50% 45%, transparent 40%, rgba(0,0,0,0.55) 100%)" }}
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(21,23,25,0.9) 0%, rgba(21,23,25,0.45) 45%, rgba(21,23,25,0.05) 70%)",
+        }}
+      />
+      <div
+        className="absolute inset-0"
+        style={{ background: "linear-gradient(180deg, rgba(21,23,25,0.25), transparent 30%, rgba(21,23,25,0.4))" }}
       />
 
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5 }}
-          className="text-[11px] font-medium uppercase tracking-[0.4em] text-teal-light"
-        >
-          Beyond the Showroom
-        </motion.p>
-        <motion.h2
+      <div className="container-page relative z-10 flex h-full items-center">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.55, delay: 0.08 }}
-          className="mt-4 font-display text-3xl font-semibold leading-[1.08] text-off-white sm:text-5xl lg:text-6xl"
+          transition={{ duration: 0.6 }}
+          className="max-w-md"
         >
-          A JOURNEY
-          <br />
-          BEYOND DESTINATIONS
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.5, delay: 0.16 }}
-          className="mt-5 max-w-md text-sm text-titanium/70 sm:text-base"
-        >
-          Every AutoElite vehicle is chosen for the road ahead, not just the
-          one behind it. Own the drive. Not just the distance.
-        </motion.p>
+          <h2 className="font-display text-3xl font-bold uppercase leading-[1.08] text-off-white sm:text-5xl">
+            A Journey Beyond Destinations
+          </h2>
+          <p className="mt-5 text-sm text-titanium sm:text-base">
+            It&rsquo;s more than a drive, it&rsquo;s a way of life.
+          </p>
+          <a
+            href="#contact"
+            className="mt-7 inline-block rounded-full border border-teal px-6 py-3 text-sm font-semibold text-teal-light transition-all duration-200 hover:bg-teal hover:text-graphite active:scale-[0.97]"
+          >
+            Explore Our Story →
+          </a>
+        </motion.div>
       </div>
     </section>
   );

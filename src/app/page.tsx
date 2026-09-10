@@ -1,12 +1,12 @@
 import { Nav } from "@/components/Nav";
 import { CinematicEntry } from "@/components/CinematicEntry";
-import { HeroShowroom } from "@/components/HeroShowroom";
+import { Hero } from "@/components/Hero";
 import { FeaturedVehicles } from "@/components/FeaturedVehicles";
-import { VehicleBrowser } from "@/components/VehicleBrowser";
 import { Brands } from "@/components/Brands";
 import { WhyChooseUs } from "@/components/WhyChooseUs";
-import { Services } from "@/components/Services";
+import { VehicleCollection } from "@/components/VehicleCollection";
 import { Lifestyle } from "@/components/Lifestyle";
+import { Services } from "@/components/Services";
 import { TestDriveCTA } from "@/components/TestDriveCTA";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
@@ -22,14 +22,14 @@ export default function Home() {
       </a>
       <Nav />
       <CinematicEntry />
-      <main id="site" className="flex-1">
-        <HeroShowroom />
+      <main className="flex-1">
+        <Hero />
         <FeaturedVehicles />
-        <VehicleBrowser />
         <Brands />
         <WhyChooseUs />
-        <Services />
+        <VehicleCollection />
         <Lifestyle />
+        <Services />
         <TestDriveCTA />
         <Contact />
       </main>

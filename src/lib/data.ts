@@ -36,6 +36,7 @@ export type Vehicle = {
   warranty: string;
   colors: { name: string; hex: string }[];
   image: string;
+  gallery: string[];
   accent: string;
 };
 
@@ -70,7 +71,13 @@ export const vehicles: Vehicle[] = [
       { name: "Guards Red", hex: "#9c2b28" },
     ],
     image: "/cars/porsche-911-carrera-studio.png",
-    accent: "#008c91",
+    gallery: [
+      "/cars/porsche-911-carrera-studio.png",
+      "/cars/porsche-taycan-studio.png",
+      "/cars/porsche-911-carrera-studio.png",
+      "/cars/porsche-911-carrera-studio.png",
+    ],
+    accent: "#008C91",
   },
   {
     id: "bmw-m4-competition",
@@ -102,7 +109,13 @@ export const vehicles: Vehicle[] = [
       { name: "Sapphire Black", hex: "#181a1e" },
     ],
     image: "/cars/bmw-m4-competition-studio.png",
-    accent: "#008c91",
+    gallery: [
+      "/cars/bmw-m4-competition-studio.png",
+      "/cars/bmw-i7-studio.png",
+      "/cars/bmw-m4-competition-studio.png",
+      "/cars/bmw-m4-competition-studio.png",
+    ],
+    accent: "#008C91",
   },
   {
     id: "mercedes-amg-gt",
@@ -134,7 +147,13 @@ export const vehicles: Vehicle[] = [
       { name: "Designo Diamond White", hex: "#efeee8" },
     ],
     image: "/cars/mercedes-amg-gt-studio.png",
-    accent: "#008c91",
+    gallery: [
+      "/cars/mercedes-amg-gt-studio.png",
+      "/cars/mercedes-s-class-studio.png",
+      "/cars/mercedes-amg-gt-studio.png",
+      "/cars/mercedes-amg-gt-studio.png",
+    ],
+    accent: "#008C91",
   },
   {
     id: "audi-rs7-sportback",
@@ -166,7 +185,13 @@ export const vehicles: Vehicle[] = [
       { name: "Glacier White", hex: "#eef0ee" },
     ],
     image: "/cars/audi-rs7-sportback-studio.png",
-    accent: "#008c91",
+    gallery: [
+      "/cars/audi-rs7-sportback-studio.png",
+      "/cars/audi-rs7-sportback-studio.png",
+      "/cars/audi-rs7-sportback-studio.png",
+      "/cars/audi-rs7-sportback-studio.png",
+    ],
+    accent: "#008C91",
   },
   {
     id: "range-rover-sport",
@@ -198,7 +223,13 @@ export const vehicles: Vehicle[] = [
       { name: "Batumi Gold", hex: "#a98a52" },
     ],
     image: "/cars/range-rover-sport-studio.png",
-    accent: "#008c91",
+    gallery: [
+      "/cars/range-rover-sport-studio.png",
+      "/cars/range-rover-sport-studio.png",
+      "/cars/range-rover-sport-studio.png",
+      "/cars/range-rover-sport-studio.png",
+    ],
+    accent: "#008C91",
   },
   {
     id: "mercedes-s-class",
@@ -230,7 +261,13 @@ export const vehicles: Vehicle[] = [
       { name: "Selenite Grey", hex: "#79787c" },
     ],
     image: "/cars/mercedes-s-class-studio.png",
-    accent: "#008c91",
+    gallery: [
+      "/cars/mercedes-s-class-studio.png",
+      "/cars/mercedes-amg-gt-studio.png",
+      "/cars/mercedes-s-class-studio.png",
+      "/cars/mercedes-s-class-studio.png",
+    ],
+    accent: "#008C91",
   },
   {
     id: "bmw-i7",
@@ -262,7 +299,13 @@ export const vehicles: Vehicle[] = [
       { name: "Carbon Black", hex: "#141414" },
     ],
     image: "/cars/bmw-i7-studio.png",
-    accent: "#008c91",
+    gallery: [
+      "/cars/bmw-i7-studio.png",
+      "/cars/bmw-m4-competition-studio.png",
+      "/cars/bmw-i7-studio.png",
+      "/cars/bmw-i7-studio.png",
+    ],
+    accent: "#008C91",
   },
   {
     id: "porsche-taycan",
@@ -294,20 +337,15 @@ export const vehicles: Vehicle[] = [
       { name: "Ice Grey", hex: "#c9cbc6" },
     ],
     image: "/cars/porsche-taycan-studio.png",
-    accent: "#008c91",
+    gallery: [
+      "/cars/porsche-taycan-studio.png",
+      "/cars/porsche-911-carrera-studio.png",
+      "/cars/porsche-taycan-studio.png",
+      "/cars/porsche-taycan-studio.png",
+    ],
+    accent: "#008C91",
   },
 ];
-
-export const brands = [
-  "Porsche",
-  "BMW",
-  "Mercedes-Benz",
-  "Audi",
-  "Range Rover",
-  "Jaguar",
-  "Aston Martin",
-  "Lexus",
-] as const;
 
 export const bodyTypes: BodyType[] = [
   "Sports Coupe",
@@ -321,6 +359,15 @@ export const bodyTypes: BodyType[] = [
 
 export const fuelTypes: FuelType[] = ["Petrol", "Diesel", "Electric"];
 
+export const brands = [
+  "BMW",
+  "Mercedes-Benz",
+  "Audi",
+  "Porsche",
+  "Land Rover",
+  "Aston Martin",
+] as const;
+
 export const whyChooseUs = [
   {
     title: "Certified Vehicles",
@@ -332,7 +379,7 @@ export const whyChooseUs = [
   },
   {
     title: "Flexible Financing",
-    body: "Financing structured around your cash flow, not a generic template.",
+    body: "Financing options structured around your cash flow, not a generic template.",
   },
   {
     title: "Expert Consultation",

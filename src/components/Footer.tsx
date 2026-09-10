@@ -5,10 +5,10 @@ const columns = [
   {
     title: "Explore",
     links: [
-      { label: "Vehicles", href: "#inventory" },
+      { label: "Vehicles", href: "#collection" },
       { label: "Brands", href: "#brands" },
       { label: "Services", href: "#services" },
-      { label: "About", href: "#experience" },
+      { label: "About", href: "#why-us" },
     ],
   },
   {
@@ -38,16 +38,13 @@ export function Footer() {
       <div className="container-page py-16">
         <div className="grid gap-10 lg:grid-cols-[1.3fr_repeat(3,1fr)]">
           <div>
-            <div className="flex items-center gap-2.5">
-              <span className="h-2 w-2 rounded-full bg-teal shadow-[0_0_10px_2px_rgba(0,140,145,0.6)]" />
-              <span className="font-display text-lg font-semibold tracking-tight text-off-white">
-                {dealershipName.slice(0, 4).toUpperCase()}
-                <span className="text-teal-light">{dealershipName.slice(4)}</span>
-              </span>
-            </div>
+            <span className="font-display text-lg font-bold tracking-tight text-off-white">
+              {dealershipName.slice(0, 4).toUpperCase()}
+              <span className="text-teal">{dealershipName.slice(4).toUpperCase()}</span>
+            </span>
             <p className="mt-4 max-w-xs text-sm text-titanium/60">
               A graphite-and-titanium showroom for the vehicles that define
-              performance, presented one at a time.
+              performance.
             </p>
             <div className="mt-6 flex gap-3">
               {social.map((Icon, i) => (
@@ -89,7 +86,7 @@ export function Footer() {
             © {new Date().getFullYear()} {dealershipName}. All rights reserved.
           </p>
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-teal-light">
-            Drive the Extraordinary.
+            Luxury Lives Here.
           </p>
         </div>
       </div>

@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
 :root {
+  /* Graphite × Titanium × Deep Teal — the single palette used everywhere,
+     entry screen and main site alike. Matches the reference palette
+     exactly: Graphite #151719, Secondary Graphite #202427,
+     Titanium #AEB4B8, Deep Teal #008C91, Dark Teal #005C61, Off White #F2F4F3. */
   --graphite: #151719;
   --graphite-2: #1b1e21;
   --graphite-3: #202427;
@@ -33,6 +37,7 @@
   --color-teal: var(--teal);
   --color-teal-light: var(--teal-light);
   --color-teal-dark: var(--teal-dark);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-display: var(--font-grotesk);
