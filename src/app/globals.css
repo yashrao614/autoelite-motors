@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --graphite: #151719;
+  --graphite-2: #1b1e21;
+  --graphite-3: #202427;
+  --graphite-4: #282c30;
+  --titanium: #aeb4b8;
+  --titanium-soft: #6b7276;
+  --off-white: #f2f4f3;
+  --muted-gray: #858c90;
+  --border-hair: rgba(174, 180, 184, 0.12);
+  --border-strong: rgba(174, 180, 184, 0.22);
+  --teal: #008c91;
+  --teal-light: #14b8bd;
+  --teal-dark: #005c61;
+
+  --background: var(--graphite);
+  --foreground: var(--off-white);
+}
+
+@theme inline {
+  --color-graphite: var(--graphite);
+  --color-graphite-2: var(--graphite-2);
+  --color-graphite-3: var(--graphite-3);
+  --color-graphite-4: var(--graphite-4);
+  --color-titanium: var(--titanium);
+  --color-titanium-soft: var(--titanium-soft);
+  --color-off-white: var(--off-white);
+  --color-muted-gray: var(--muted-gray);
+  --color-border-hair: var(--border-hair);
+  --color-border-strong: var(--border-strong);
+  --color-teal: var(--teal);
+  --color-teal-light: var(--teal-light);
+  --color-teal-dark: var(--teal-dark);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-display: var(--font-grotesk);
+  --font-sans: var(--font-geist-sans);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+}
+
+.container-page {
+  max-width: 1480px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .container-page {
+    padding-inline: 2.5rem;
+  }
+}
+
+.text-teal-gradient {
+  background: linear-gradient(120deg, var(--teal-dark), var(--teal-light) 50%, var(--teal-dark));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hairline {
+  border-color: var(--border-hair);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  background: var(--teal);
+  color: var(--off-white);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
