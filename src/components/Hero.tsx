@@ -5,36 +5,38 @@ import { motion } from "motion/react";
 
 export function Hero() {
   return (
-    <section id="site" className="relative flex h-[100dvh] w-full items-center overflow-hidden bg-graphite">
-      <motion.div
-        initial={{ scale: 1.08, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute inset-0"
-      >
-        <Image
-          src="/showroom-hero.png"
-          alt="AutoElite showroom"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
+    <section id="site" className="relative w-full overflow-hidden bg-graphite sm:flex sm:h-[100dvh] sm:items-center">
+      <div className="relative aspect-[4/3] w-full overflow-hidden sm:absolute sm:inset-0 sm:aspect-auto">
+        <motion.div
+          initial={{ scale: 1.08, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
+          className="absolute inset-0"
+        >
+          <Image
+            src="/showroom-hero.png"
+            alt="AutoElite showroom"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+        </motion.div>
+        <div
+          className="absolute inset-0 hidden sm:block"
+          style={{
+            background:
+              "linear-gradient(90deg, rgba(21,23,25,0.92) 0%, rgba(21,23,25,0.55) 42%, rgba(21,23,25,0.15) 70%, rgba(21,23,25,0.35) 100%)",
+          }}
         />
-      </motion.div>
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(90deg, rgba(21,23,25,0.92) 0%, rgba(21,23,25,0.55) 42%, rgba(21,23,25,0.15) 70%, rgba(21,23,25,0.35) 100%)",
-        }}
-      />
-      <div
-        className="absolute inset-0"
-        style={{ background: "linear-gradient(180deg, rgba(21,23,25,0.3) 0%, transparent 25%, transparent 75%, rgba(21,23,25,0.55) 100%)" }}
-      />
+        <div
+          className="absolute inset-0"
+          style={{ background: "linear-gradient(180deg, rgba(21,23,25,0.3) 0%, transparent 25%, transparent 75%, rgba(21,23,25,0.55) 100%)" }}
+        />
+      </div>
 
-      <div className="relative z-10 -mt-20 w-full pl-6 sm:-mt-24 sm:pl-10 lg:pl-14">
-        <div className="max-w-[220px] sm:max-w-xs lg:max-w-sm">
+      <div className="relative z-10 w-full px-6 py-10 sm:-mt-20 sm:px-0 sm:py-0 sm:pl-10 lg:pl-14">
+        <div className="sm:max-w-xs lg:max-w-sm">
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
