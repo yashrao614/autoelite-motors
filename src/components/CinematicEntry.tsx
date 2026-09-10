@@ -104,7 +104,7 @@ export function CinematicEntry() {
             </h1>
             <p className="mt-3 text-[10px] font-medium uppercase tracking-[0.3em] text-muted-gray sm:mt-5 sm:text-sm sm:tracking-[0.35em]">
               Luxury <span className="text-teal-light">/</span> Performance{" "}
-              <span className="text-teal-light">/</span> Beyond
+              <span className="text-teal-light">/</span> Royalty
             </p>
           </motion.div>
 

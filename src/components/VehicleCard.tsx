@@ -26,7 +26,7 @@ export function VehicleCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.5, delay: (index % 4) * 0.06, ease: [0.16, 1, 0.3, 1] }}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-border-hair bg-graphite-3 transition-all duration-300 hover:-translate-y-1 hover:border-teal/40 hover:shadow-[0_18px_40px_-20px_rgba(0,140,145,0.35)]"
+      className="group relative flex flex-col overflow-hidden rounded-2xl border border-border-hair bg-graphite-3 transition-all duration-300 hover:-translate-y-1 hover:border-teal/40 hover:shadow-[0_18px_40px_-20px_rgba(0,140,145,0.35)]"
     >
       <button
         type="button"
