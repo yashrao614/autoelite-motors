@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "motion/react";
-import { Play } from "@phosphor-icons/react";
 
 export function Hero() {
   return (
@@ -73,15 +72,6 @@ export function Hero() {
               className="whitespace-nowrap rounded-full bg-teal px-7 py-3.5 text-center text-sm font-semibold text-graphite shadow-[0_8px_24px_-8px_rgba(0,140,145,0.55)] transition-all duration-200 hover:brightness-110 active:scale-[0.97]"
             >
               Explore Vehicles →
-            </a>
-            <a
-              href="#lifestyle"
-              className="group flex items-center gap-3 whitespace-nowrap text-sm font-semibold text-off-white"
-            >
-              <span className="flex h-9 w-9 items-center justify-center rounded-full border border-border-strong transition-colors duration-200 group-hover:border-teal group-hover:text-teal-light">
-                <Play size={12} weight="fill" />
-              </span>
-              Watch Our Story
             </a>
           </motion.div>
         </div>

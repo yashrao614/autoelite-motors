@@ -75,9 +75,10 @@ export function Nav() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-off-white/85 transition-colors duration-200 hover:text-teal-light"
+              className="group relative text-sm font-medium text-off-white/85 transition-colors duration-200 hover:text-teal-light"
             >
               {link.label}
+              <span className="absolute inset-x-0 -bottom-1 h-px origin-left scale-x-0 bg-teal-light transition-transform duration-300 ease-out group-hover:scale-x-100" />
             </a>
           ))}
         </nav>
